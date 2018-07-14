@@ -1,0 +1,9 @@
+{
+  "name": "performance-tests",
+  "version": "1.0.0",
+  "description": "This is an automation tools that enables you to run automated performance tests of your current build against the current build.",
+  "main": "index.js",
+  "author": "Jaime Rios <jaimememadrigalrios@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
