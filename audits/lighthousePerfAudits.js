@@ -1,13 +1,8 @@
 'use strict';
 require('dotenv').config();
 
-const chromeLauncher = require( 'chrome-launcher' );
-const fs = require( 'fs' );
+const chromeLauncher = require('chrome-launcher' );
 const lighthouse = require( 'lighthouse' );
-
-const flags = {
-  output: 'json'
-};
 
 const lighthousePerfAudits = (url, flags, config = null) => {
   return chromeLauncher.launch()

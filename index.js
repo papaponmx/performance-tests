@@ -1,9 +1,15 @@
 'use strict';
 require('dotenv').config();
 
+const fs = require( 'fs' );
 const { lighthousePerfAudits } = require('./audits/lighthousePerfAudits')
 
-const { APP_STAGING_URL, APP_PRODUCTION_URL } = proccess.env;
+const { APP_STAGING_URL, APP_PRODUCTION_URL } = process.env;
+
+
+const flags = {
+  output: 'json'
+};
 
 
 lighthousePerfAudits( APP_PRODUCTION_URL, flags )
