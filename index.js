@@ -13,9 +13,12 @@ const config = {
 };
 
 puppeteer.launch().then(async browser => {
-  const page = await browser.page();
+  const page = await browser.newPage();
 
-  const metrics = await page.metrics();
+  const metrics = await page.metrics()
+  .catch(e => {
+    console.log(e)
+  });
 
   // TODO: Add link here that allows you to genereate metrics report
 

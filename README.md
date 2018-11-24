@@ -8,6 +8,7 @@ This is a placeholder project that should enable you to run automated tests, so 
 
 [ShellJS](https://github.com/shelljs/shelljs)
 [Lighthouse]()
+[Puppeteer]()
 
 `lighthouse --output json --output-path <path/for/output.json>`
 
@@ -16,5 +17,5 @@ This is a placeholder project that should enable you to run automated tests, so 
 List scripts:
 
 - Create report for website
-- Generate analizis
+- Generate analisys
 - Generate html table
