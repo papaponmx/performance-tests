@@ -1,27 +1,15 @@
-const puppeteer = require("puppeteer");
+'use strict';
+require('dotenv').config();
 
-// TODO: Move this to a config.js and add interactive CLI capabilities
-const config = {
-  devRelease: {
-    env: "development",
-    url: "riosjaime.com"
-  },
-  localRelease: {
-    env: "local",
-    url: "http://localhost:3000"
-  }
-};
 
-puppeteer.launch().then(async browser => {
-  const page = await browser.newPage();
 
-  const metrics = await page.metrics()
-  .catch(e => {
-    console.log(e)
-  });
 
-  // TODO: Add link here that allows you to genereate metrics report
-
-  await console.log(metrics.LayoutDuration);
-  await console.log(metrics.ScriptDuration);
+lighthousePerfAudits( APP_URL, flags )
+  .then( results => {
+     fs.writeFile( './results.json', JSON.stringify(results), function ( err ) {
+        if ( err ) {
+          return console.log( err );
+        }
+        console.log( 'The file was saved!' );
+      } );
 });
