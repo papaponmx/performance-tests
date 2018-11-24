@@ -1,11 +1,9 @@
 'use strict';
 require('dotenv').config();
 
-const chromeLauncher = require( 'lighthouse/chrome-launcher/chrome-launcher' );
+const chromeLauncher = require( 'chrome-launcher' );
 const fs = require( 'fs' );
 const lighthouse = require( 'lighthouse' );
-
-const { APP_URL } = proccess.env;
 
 const flags = {
   output: 'json'
