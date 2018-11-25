@@ -54,3 +54,8 @@ app.get('/run', (req, res) => {
 
   //    secret is not valid, return 500
 });
+
+
+app.listen(process.env.PORT || 8080, () => {
+  console.log('App linstening on ', process.env.PORT || 8080);
+});
