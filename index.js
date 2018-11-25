@@ -2,12 +2,14 @@
 
 require('dotenv').config();
 
+const { APP_STAGING_URL, APP_PRODUCTION_URL } = process.env;
+
 const express = require('express');
+const bodyParser = require('body-parser');
 const fs = require('fs');
 const { lighthousePerfAudits } = require('./audits/lighthousePerfAudits');
 
 const app = express();
-const { APP_STAGING_URL, APP_PRODUCTION_URL } = process.env;
 const flags = {
   output: 'json',
 };
