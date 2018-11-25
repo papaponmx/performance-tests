@@ -17,7 +17,7 @@ const flags = {
 
 app.use(bodyParser.json());
 
-app.get('/run', (req, res) => {
+app.post('/run', (req, res) => {
   // 1. Check secret
   console.log('DQTP', req.body);
   if (req.headers['X-Hub-Signature']) {
