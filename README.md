@@ -2,11 +2,12 @@
 
 This is a placeholder project that should enable you to run automated tests, so you can provide more insights about how your next build improves upon the new website.
 
-// TODO: List relevant dependencies like lightouse cli
+I'm using this repo also to create example of functionality. You can see releated blog posts at [papaponmx](https://dev.to/papaponmx)
+
 
 ## Dependencies
 
-[ShellJS](https://github.com/shelljs/shelljs)
+TODO: List relevant dependencies like lightouse cli
 [Lighthouse]()
 [Puppeteer]()
 [body-parser]()
@@ -14,10 +15,20 @@ This is a placeholder project that should enable you to run automated tests, so 
 
 `lighthouse --output json --output-path <path/for/output.json>`
 
-## CLI structure
+## Project structure
 
-List scripts:
+There are many scripts available wich should follow SOLID principles:
 
-- Create report for website
-- Generate analisys
-- Generate html table
+TODO: List scripts:
+
+## Environment variables
+
+TODO: Desribe and list required env variables
+
+## Deploying the project
+
+TODO: Add instructions for connecting to Github or anyother provider
+
+## License
+
+[GNU v3](https://www.gnu.org/licenses/gpl-3.0.en.html)
