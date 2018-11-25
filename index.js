@@ -6,9 +6,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const { lighthousePerfAudits } = require('./audits/lighthousePerfAudits');
-const { hash } = require('./crypto/index');
-
-console.log('DQTP', hash);
 
 const app = express();
 const flags = {
@@ -19,10 +16,7 @@ app.use(bodyParser.json());
 
 app.post('/run', (req, res) => {
   // 1. Check secret
-  console.log('DQTP', req.headers);
   if (req.headers['x-hub-signature']) {
-    console.log('it is working great');
-
     /**
      * Secret is valid,
      * run tests and write json data
@@ -48,13 +42,12 @@ app.post('/run', (req, res) => {
         });
       });
 
-    //       send response with 200
+    // send response with 200
     res.status(200).send();
   } else {
     res.status(500).send();
   }
-
-  //    secret is not valid, return 500
+  // secret is not valid, return 500
 });
 
 app.listen(process.env.PORT || 8080, () => {
