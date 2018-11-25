@@ -9,6 +9,7 @@ const { lighthousePerfAudits } = require('./audits/lighthousePerfAudits');
 const { hash } = require('./crypto/index');
 
 console.log('DQTP', hash);
+
 const app = express();
 const flags = {
   output: 'json',
