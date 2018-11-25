@@ -19,8 +19,8 @@ app.use(bodyParser.json());
 
 app.post('/run', (req, res) => {
   // 1. Check secret
-  console.log('DQTP', req.body);
-  if (req.headers['X-Hub-Signature']) {
+  console.log('DQTP', req.headers);
+  if (req.headers['x-hub-signature']) {
     console.log('it is working great');
 
     /**
