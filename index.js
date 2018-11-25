@@ -1,5 +1,3 @@
-
-
 require('dotenv').config();
 
 const { APP_STAGING_URL, APP_PRODUCTION_URL } = process.env;
@@ -8,7 +6,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const { lighthousePerfAudits } = require('./audits/lighthousePerfAudits');
+const { hash } = require('./crypto/index');
 
+console.log('DQTP', hash);
 const app = express();
 const flags = {
   output: 'json',

@@ -9,6 +9,8 @@ This is a placeholder project that should enable you to run automated tests, so 
 [ShellJS](https://github.com/shelljs/shelljs)
 [Lighthouse]()
 [Puppeteer]()
+[body-parser]()
+[express]()
 
 `lighthouse --output json --output-path <path/for/output.json>`
 
